@@ -15,7 +15,8 @@ $(document).ready(function () {
     $('.amenities h4').text(Object.values(amenityIds).join(', '));
   });
 });
-// get status of API
+
+
 $.getJSON('http://0.0.0.0:5001/api/v1/status/', (data) => {
   if (data.status === 'OK') {
     $('div#api_status').addClass('available');
